@@ -1,6 +1,0 @@
-D:\Softs\IDE\WorkSpace\BST-Framework (1)\BST-Framework\BST\bin\Debug\BST.pdb
-D:\Softs\IDE\WorkSpace\BST-Framework (1)\BST-Framework\BST\obj\Debug\BST.csprojResolveAssemblyReference.cache
-D:\Softs\IDE\WorkSpace\BST-Framework (1)\BST-Framework\BST\obj\Debug\BST.pdb
-D:\Softs\IDE\WorkSpace\BST-Framework (1)\BST-Framework\BST\bin\Debug\BST.dll.config
-D:\Softs\IDE\WorkSpace\BST-Framework (1)\BST-Framework\BST\bin\Debug\BST.dll
-D:\Softs\IDE\WorkSpace\BST-Framework (1)\BST-Framework\BST\obj\Debug\BST.dll
