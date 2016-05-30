@@ -93,3 +93,4 @@ D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplicatio
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\BSTreeApp.csprojResolveAssemblyReference.cache
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\BST.dll

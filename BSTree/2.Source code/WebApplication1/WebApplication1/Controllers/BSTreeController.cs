@@ -16,6 +16,10 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public RestTemplate BuildTree([FromBody] int[] a)
         {
+            if (a == null)
+            {
+                return new RestTemplate((int)HttpStatusCode.InternalServerError, null, "An array of integers is required to build a tree");
+            }
             BSTree tree = new BSTree(a, true);
             NodeDto dto = toDto(tree.root);
             return new RestTemplate((int)HttpStatusCode.OK, dto, "");
