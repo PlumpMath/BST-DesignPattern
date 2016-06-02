@@ -56,27 +56,44 @@ $(document).ready(function() {
         }
       }
     };
-    drawNode(node);
+    drawTree(tree);
   });
-  // refactor tree
-  function refactorTree(tree) {
-    let level =0;
-    let order = 1;
-    let currNode = tree;
-
+  // draw tree
+  function drawTree(tree) {
+    drawTreeLine(tree);
+    drawTreeNode(tree);
   }
 
-  function SVG(tag) {
+  function drawTreeNode(tree) { // ve node cua cay
+    if (tree == null) {
+      return;
+    }
+    drawNode(tree);
+    drawTree(tree.left);
+    drawTree(tree.right);
+  }
+
+  function drawTreeLine(tree) { // ve line cua cay
+    if (tree == null) {
+      return;
+    }
+    drawLine(tree, tree.left);
+    drawLine(tree, tree.right);
+    drawTreeLine(tree.left);
+    drawTreeLine(tree.right);
+  }
+
+  function SVG(tag) { // tao doi tuong
     return document.createElementNS('http://www.w3.org/2000/svg', tag);
   }
   var center = 360;
   // draw functions
   // draw node
-  function getFirstX(level) {
+  function getFirstX(level) { // lay x cua node dau tien moi level
     return (center / Math.pow(2, level));
   }
 
-  function createText(str) {
+  function createText(str) { // tao text trong node
     var newText = SVG('text');
     newText.setAttributeNS(null, "x", 0);
     newText.setAttributeNS(null, "y", 5);
@@ -85,18 +102,40 @@ $(document).ready(function() {
     return newText;
   }
 
-  function drawNode(node) {
+  function getXNode(node) { // lay toa do x cua node
+    return getFirstX(node.level) * (2 * node.order - 1);
+  }
+
+  function getYNode(node) { // lay toa do y cua node
+    return 40 + (100 * node.level);
+  }
+
+  function drawNode(node) { // ve node
     // tinh toa do
-    let x = getFirstX(node.level) * (2 * node.order - 1);
-    let y = 40 + (100 * node.level);
+    let x = getXNode(node);
+    let y = getYNode(node);
     let $svg = $('#svgPanel');
     let $g = $(SVG('g')).attr('transform', "translate(" + x + "," + y + ")");
-    let $circle = $(SVG('circle')).attr('cx', 0).attr('cy', 0).attr('r', 22.5).attr('fill', 'none').attr('stroke', 'red').attr('stroke-width', 3).appendTo($g);
+    let $circle = $(SVG('circle')).attr('cx', 0).attr('cy', 0).attr('r', 22.5).attr('fill', '#FFF').attr('stroke', '#666').attr('stroke-width', 3).appendTo($g);
     let $text = $(createText(node.key)).attr("style", "z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;").appendTo($g);
     $g.appendTo($svg);
   }
-  // drawLine
-  function drawLine(idString) {
+  // drawLine 
+  function drawLine(src, des) { // tryen vao 1 node
+    if (des == null) {
+      return;
+    }
+    // tinh toa do
+    let xsrc = getXNode(src);
+    let ysrc = getYNode(src);
+    let xdes = getXNode(des);
+    let ydes = getYNode(des);
+    let $svg = $('#svgPanel');
+    let $line = $(SVG('path')).attr('d', "M" + xsrc + "," + ysrc + " " + "L" + xdes + "," + ydes).attr("style", "stroke:#666; fill:none; stroke-width: 3;");
+    $line.appendTo($svg);
+  }
+  // drawLine Animation
+  function drawLineAni(idString) { // ve line
     $(idString).show();
     let path = document.querySelector(idString);
     let length = path.getTotalLength();
