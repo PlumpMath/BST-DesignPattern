@@ -3,17 +3,27 @@ $(document).ready(function() {
     // drawLine('#l00t');
     let tree = {
       key: 12,
+      level: 0,
+      order: 1,
       left: {
         key: 9,
+        level: 1,
+        order: 1,
         left: {
           key: 7,
+          order: 1,
+          level: 2,
           left: null,
           right: null
         },
         right: {
           key: 11,
+          level: 2,
+          order: 2,
           left: {
             key: 10,
+            level: 3,
+            order: 3,
             left: null,
             right: null
           },
@@ -22,17 +32,25 @@ $(document).ready(function() {
       },
       right: {
         key: 20,
+        level: 1,
+        order: 2,
         left: {
           key: 16,
+          level: 2,
+          order: 3,
           lef: null,
           right: {
             key: 18,
+            level: 3,
+            order: 6,
             left: null,
             right: null
           }
         },
         right: {
           key: 23,
+          level: 2,
+          order: 4,
           left: null,
           right: null
         }
@@ -45,7 +63,7 @@ $(document).ready(function() {
     let level =0;
     let order = 1;
     let currNode = tree;
-    
+
   }
 
   function SVG(tag) {
