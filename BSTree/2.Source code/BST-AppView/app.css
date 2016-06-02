@@ -1,0 +1,89 @@
+body {
+  font-family: "arial";
+  font-size: 1em;
+  color: #666;
+}
+
+.container {
+  width: 1200px;
+  border: solid 1px #CCC;
+  margin: 0 auto;
+}
+
+.title {
+  height: 50px;
+  font-size: 2em;
+  padding-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content {
+  height: 700px;
+  position: relative;
+}
+
+.function {
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  border: solid 1px #ccc;
+  border-left: 0;
+}
+
+.main {
+  height: 100%;
+  width: 720px;
+  position: absolute;
+  left: 300px;
+  border: solid 1px #ccc;
+  border-left: 0;
+}
+
+.log {
+  height: 100%;
+  width: 180px;
+  position: absolute;
+  right: 0;
+  border: solid 1px #ccc;
+  border-left: 0;
+  border-right: 0;
+}
+
+.panel-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 15px;
+  border-bottom: solid 1px #ccc;
+}
+
+.func-item {
+  padding: 10px;
+  border-bottom: solid 1px #ccc;
+}
+
+.log-item {
+  border-bottom: solid 1px #ccc;
+  padding: 5px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.func-item button {
+  width: 100px;
+  height: 40px;
+}
+
+.func-item input {
+  width: 50px;
+  height: 34px;
+}
+
+.line {
+  fill-opacity: 0;
+  stroke: #666;
+  stroke-width: 3;
+  /*display: none;*/
+}

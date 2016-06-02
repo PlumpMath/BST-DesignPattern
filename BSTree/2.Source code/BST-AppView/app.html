@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      BST
+    </title>
+    <script src="jquery-1.12.4.min.js" type="text/javascript">
+    </script>
+    <script src="app.js" type="text/javascript">
+    </script>
+    <link href="app.css" media="all" rel="stylesheet" type="text/css">
+    </link>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        BST
+      </div>
+      <div class="content">
+        <div class="function">
+          <div class="panel-title">
+            Fucntions
+          </div>
+          <div class="func-item">
+            Order:
+            <select>
+              <option selected="" value="L-N-R">
+                Left - Node - Right
+              </option>
+              <option value="N-L-R">
+                Node - Left - Right
+              </option>
+              <option value="L-R-N">
+                Left - Right - Node
+              </option>
+            </select>
+          </div>
+          <div class="func-item">
+            <button id="btn-create">
+              Create BST
+            </button>
+          </div>
+          <div class="func-item">
+            <button id="btn-create">
+              Insert BST
+            </button>
+            <input id="insert-key" name="insert-node" type="text">
+            </input>
+          </div>
+          <div class="func-item">
+            <button id="btn-create">
+              Find
+            </button>
+            <input id="find-key" name="find-node" type="text">
+            </input>
+          </div>
+          <div class="func-item">
+            <button id="btn-create">
+              Get MAX
+            </button>
+          </div>
+          <div class="func-item">
+            <button id="btn-create">
+              Get MIN
+            </button>
+          </div>
+          <div class="func-item">
+            <button id="btn-create">
+              Get MIN of RIGHT
+            </button>
+          </div>
+          <div class="func-item">
+            <button id="btn-create">
+              Get MAX of LEFT
+            </button>
+          </div>
+        </div>
+        <div class="main">
+          <div class="panel-title">
+            Panel
+          </div>
+          <svg id="svgPanel" height="650" width="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- LINE -->
+            <path id="l00t" class="line" d="M360,40 L180,140" style="stroke:#666; fill:none;" />
+            <!-- Cap 0 -->
+            <g transform="translate(360, 40)">
+              <circle id="c00" cx="0" cy="0" r="22.5" style="z-index: 2; stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <!-- Cap 1 -->
+            <g transform="translate(180, 140)">
+              <circle cx="0" cy="0" r="22.5" style="z-index: 2; stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(540, 140)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <!-- Cap 2 -->
+            <g transform="translate(90, 240)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(270, 240)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(450, 240)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(630, 240)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <!-- Cap 3 -->
+            <g transform="translate(45, 340)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(135, 340)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(225, 340)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(315, 340)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(415, 340)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(495, 340)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(585, 340)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <g transform="translate(675, 340)">
+              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
+              </circle>
+              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
+                27
+              </text>
+            </g>
+            <!-- Cap 5 -->
+          </svg>
+        </div>
+        <div class="log">
+          <div class="panel-title">
+            Logs
+          </div>
+          <div class="log-item">
+            Start
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
