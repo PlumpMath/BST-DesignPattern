@@ -22,8 +22,49 @@
             Fucntions
           </div>
           <div class="func-item">
+            <button id="btn-create">
+              Create BST
+            </button>
+            <input id="array-key" name="array-node" placeholder="Ex: 1, 2, 3, 4, 5" type="text">
+            </input>
+          </div>
+          <div class="func-item">
+            <button id="btn-insert">
+              Insert BST
+            </button>
+            <input id="insert-key" name="insert-node" type="number">
+            </input>
+          </div>
+          <div class="func-item">
+            <button id="btn-find">
+              Find
+            </button>
+            <input id="find-key" name="find-node" type="number">
+            </input>
+          </div>
+          <div class="func-item">
+            <button id="btn-get-max">
+              Get MAX
+            </button>
+          </div>
+          <div class="func-item">
+            <button id="btn-get-min">
+              Get MIN
+            </button>
+          </div>
+          <div class="func-item">
+            <button id="btn-min-right">
+              Get MIN of RIGHT
+            </button>
+          </div>
+          <div class="func-item">
+            <button id="btn-max-left">
+              Get MAX of LEFT
+            </button>
+          </div>
+          <div class="func-item">
             Order:
-            <select>
+            <select id="order-value">
               <option selected="" value="L-N-R">
                 Left - Node - Right
               </option>
@@ -34,44 +75,8 @@
                 Left - Right - Node
               </option>
             </select>
-          </div>
-          <div class="func-item">
-            <button id="btn-create">
-              Create BST
-            </button>
-          </div>
-          <div class="func-item">
-            <button id="btn-create">
-              Insert BST
-            </button>
-            <input id="insert-key" name="insert-node" type="text">
-            </input>
-          </div>
-          <div class="func-item">
-            <button id="btn-create">
-              Find
-            </button>
-            <input id="find-key" name="find-node" type="text">
-            </input>
-          </div>
-          <div class="func-item">
-            <button id="btn-create">
-              Get MAX
-            </button>
-          </div>
-          <div class="func-item">
-            <button id="btn-create">
-              Get MIN
-            </button>
-          </div>
-          <div class="func-item">
-            <button id="btn-create">
-              Get MIN of RIGHT
-            </button>
-          </div>
-          <div class="func-item">
-            <button id="btn-create">
-              Get MAX of LEFT
+            <button id="btn-show-order">
+              Show ORDER
             </button>
           </div>
         </div>
@@ -79,7 +84,7 @@
           <div class="panel-title">
             Panel
           </div>
-          <svg id="svgPanel" height="650" width="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg height="650" id="svgPanel" width="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- LINE -->
             <!-- Cap 0 -->
             <!-- <g transform="translate(360, 40)">
@@ -196,9 +201,9 @@
           <div class="panel-title">
             Logs
           </div>
-          <div class="log-item">
+          <!-- <div class="log-item">
             Start
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

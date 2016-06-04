@@ -69,6 +69,8 @@ body {
   padding: 5px;
   font-size: 0.8em;
   text-align: center;
+  font-weight: bold;
+  color: #1b72e2;
 }
 
 .func-item button {
@@ -86,4 +88,12 @@ body {
   stroke: #666;
   stroke-width: 3;
   /*display: none;*/
+}
+
+#array-key {
+  width: 150px !important;
+}
+
+#btn-show-order {
+  margin-top: 10px;
 }
