@@ -63,6 +63,13 @@
             </button>
           </div>
           <div class="func-item">
+            <button id="btn-delete">
+              Delete
+            </button>
+            <input id="delete-key" name="delete-node" type="number">
+            </input>
+          </div>
+          <div class="func-item">
             Order:
             <select id="order-value">
               <option selected="" value="L-N-R">
@@ -84,118 +91,13 @@
           <div class="panel-title">
             Panel
           </div>
-          <svg height="650" id="svgPanel" width="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- LINE -->
-            <!-- Cap 0 -->
-            <!-- <g transform="translate(360, 40)">
-              <circle id="c00" cx="0" cy="0" r="22.5" style="z-index: 2; stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g> -->
-            <!-- Cap 1 -->
-            <!-- <g transform="translate(180, 140)">
-              <circle cx="0" cy="0" r="22.5" style="z-index: 2; stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(540, 140)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g> -->
-            <!-- Cap 2 -->
-            <!-- <g transform="translate(90, 240)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(270, 240)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(450, 240)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(630, 240)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g> -->
-            <!-- Cap 3 -->
-            <!-- <g transform="translate(45, 340)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(135, 340)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(225, 340)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(315, 340)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(415, 340)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(495, 340)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(585, 340)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g>
-            <g transform="translate(675, 340)">
-              <circle cx="0" cy="0" r="22.5" style="stroke: #666; stroke-width: 3px; stroke-opacity: 1; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: #ECECEC; fill-opacity: 1;">
-              </circle>
-              <text dy="0.6ex" style="z-index: 2; fill: #666; font-size: 1em; font-weight: normal; font-style: normal; opacity: 1; text-anchor: middle;" x="0" y="0">
-                27
-              </text>
-            </g> -->
+          <svg height="550" id="svgPanel" width="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           </svg>
+          <div class="tree-info">
+            <!-- <div class="tree-info-item">
+              Number of leaves: 4
+            </div> -->
+          </div>
         </div>
         <div class="log">
           <div class="panel-title">

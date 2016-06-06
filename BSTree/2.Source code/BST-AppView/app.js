@@ -63,6 +63,7 @@ $(document).ready(function() {
   };
   $('#btn-create').click(function() {
     drawTree(tree);
+    showTreeInfo(tree);
   });
   $('#btn-insert').click(function() {
     if (!$('#insert-key').val()) {
@@ -89,6 +90,13 @@ $(document).ready(function() {
   });
   $('#btn-max-left').click(function() {
     getMaxOfLeft(tree);
+  });
+  $('#btn-delete').click(function() {
+    if (!$('#delete-key').val()) {
+      alert("Please enter a key");
+      return;
+    }
+    deleteNode($('#delete-key').val(), tree);
   });
   $('#btn-show-order').click(function() {
     // showOrderLNR(tree.left, tree);
@@ -380,7 +388,7 @@ $(document).ready(function() {
       }, 1000);
     }
   }
-  ////////////////////////////// Get max of Lef //////////////////////////////
+  ////////////////////////////// Get max of LEFT //////////////////////////////
   function getMaxOfLeft(tree) {
     drawNode(tree, '#dd1b16');
     $('.log').append("<div class='log-item'>START to GET MAX of LEFT</div>");
@@ -396,6 +404,11 @@ $(document).ready(function() {
         getMaxProcess(tree.left);
       }, 1000);
     }
+  }
+  ////////////////////////////// Get max of Lef //////////////////////////////
+  function deleteNode(key, tree) {
+    // goi api delete key de tra ve tree
+    // sau do goi ham drawTree(tree) de ve lai cay nhe
   }
   ////////////////////////////// Show ORDER //////////////////////////////
   function showOrder(tree, order) {}
@@ -428,5 +441,17 @@ $(document).ready(function() {
     showOrderLRN(tree.right);
     $('.log').append("<div class='log-item'>" + tree.key + "</div>");
     drawNode(tree, '#dd1b16');
+  }
+
+  function showTreeInfo(tree) {
+    // goi API sau do truyen vao ben duoi
+    $('.tree-info').append("<div class='tree-info-item'>" + "Number of leaves: " + 3 + "</div>");
+    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Child: " + 3 + "</div>");
+    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Left Child: " + 3 + "</div>");
+    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Right Child: " + 3 + "</div>");
+    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have Both Children: " + 3 + "</div>");
+    $('.tree-info').append("<div class='tree-info-item'>" + "Total Nodes: " + 3 + "</div>");
+    $('.tree-info').append("<div class='tree-info-item'>" + "Height of Tree: " + 3 + "</div>");
+    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes on each Level (Level/Nodes): " + "0/1, 1/2, 2/4, 3/3" + "</div>");
   }
 });

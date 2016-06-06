@@ -97,3 +97,10 @@ body {
 #btn-show-order {
   margin-top: 10px;
 }
+
+.tree-info-item {
+  width: 150px;
+  float: left;
+  height: 45px;
+  padding-left: 25px;
+}
