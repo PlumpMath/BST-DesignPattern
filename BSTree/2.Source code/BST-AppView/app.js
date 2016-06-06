@@ -110,6 +110,9 @@ $(document).ready(function() {
       showOrderLRN(tree);
     }
   });
+   $('#btn-clear').click(function() {
+    clearTree(tree);
+  });
   ////////////////////////////// draw tree //////////////////////////////
   function drawTree(tree) {
     drawTreeLine(tree);
@@ -223,7 +226,7 @@ $(document).ready(function() {
   ////////////////////////////// insert a node //////////////////////////////
   // insert node
   function insertNode(key, tree) {
-    $('.log').append("<div class='log-item'>START to INSERT node " + key + "</div>");
+    $('.log-content').append("<div class='log-item'>START to INSERT node " + key + "</div>");
     showNode(key);
     insertNodeProcess(key, tree);
   }
@@ -232,7 +235,7 @@ $(document).ready(function() {
     drawNode(tree, '#dd1b16');
     let newNode = {};
     if (key < tree.key) { // trai
-      $('.log').append("<div class='log-item'>" + key + " < " + tree.key + " --> Go to LEFT</div>");
+      $('.log-content').append("<div class='log-item'>" + key + " < " + tree.key + " --> Go to LEFT</div>");
       if (tree.left == null) { // ve node trai
         newNode = {
           key: key,
@@ -245,8 +248,8 @@ $(document).ready(function() {
         drawLineAni(tree, newNode);
         setTimeout(function() {
           drawNode(newNode, '#1b72e2');
-          $('.log').append("<div class='log-item'>Draw Node: " + key + "</div>");
-          $('.log').append("<div class='log-item'>FINISH</div>");
+          $('.log-content').append("<div class='log-item'>Draw Node: " + key + "</div>");
+          $('.log-content').append("<div class='log-item'>FINISH</div>");
           return;
         }, 1000);
       } else { // duyet trai
@@ -257,7 +260,7 @@ $(document).ready(function() {
         }, 1000);
       }
     } else { // phai
-      $('.log').append("<div class='log-item'>" + key + " >= " + tree.key + " --> Go to RIGHT</div>");
+      $('.log-content').append("<div class='log-item'>" + key + " >= " + tree.key + " --> Go to RIGHT</div>");
       if (tree.right == null) {
         newNode = {
           key: key,
@@ -270,8 +273,8 @@ $(document).ready(function() {
         drawLineAni(tree, newNode);
         setTimeout(function() {
           drawNode(newNode, '#1b72e2');
-          $('.log').append("<div class='log-item'>Draw Node: " + key + "</div>");
-          $('.log').append("<div class='log-item'>FINISH</div>");
+          $('.log-content').append("<div class='log-item'>Draw Node: " + key + "</div>");
+          $('.log-content').append("<div class='log-item'>FINISH</div>");
           return;
         }, 1000);
       } else {
@@ -285,7 +288,7 @@ $(document).ready(function() {
   }
   ////////////////////////////// find a node //////////////////////////////
   function findNode(key, tree) {
-    $('.log').append("<div class='log-item'>START to FIND node " + key + "</div>");
+    $('.log-content').append("<div class='log-item'>START to FIND node " + key + "</div>");
     showNode(key);
     findNodeProcess(key, tree);
   }
@@ -293,10 +296,10 @@ $(document).ready(function() {
   function findNodeProcess(key, tree) {
     drawNode(tree, '#dd1b16');
     if (key < tree.key) { // trai
-      $('.log').append("<div class='log-item'>" + key + " < " + tree.key + " --> Go to LEFT</div>");
+      $('.log-content').append("<div class='log-item'>" + key + " < " + tree.key + " --> Go to LEFT</div>");
       if (tree.left == null) { // khong tim thay
-        $('.log').append("<div class='log-item'>Node " + key + " NOT found</div>");
-        $('.log').append("<div class='log-item'>FINISH</div>");
+        $('.log-content').append("<div class='log-item'>Node " + key + " NOT found</div>");
+        $('.log-content').append("<div class='log-item'>FINISH</div>");
         return;
       } else { // duyet trai
         drawLine(tree, tree.left, '#dd1b16');
@@ -307,10 +310,10 @@ $(document).ready(function() {
       }
     }
     if (key > tree.key) { // phai
-      $('.log').append("<div class='log-item'>" + key + " > " + tree.key + " --> Go to RIGHT</div>");
+      $('.log-content').append("<div class='log-item'>" + key + " > " + tree.key + " --> Go to RIGHT</div>");
       if (tree.right == null) {
-        $('.log').append("<div class='log-item'>Node " + key + " NOT found</div>");
-        $('.log').append("<div class='log-item'>FINISH</div>");
+        $('.log-content').append("<div class='log-item'>Node " + key + " NOT found</div>");
+        $('.log-content').append("<div class='log-item'>FINISH</div>");
         return;
       } else {
         drawLine(tree, tree.right, '#dd1b16');
@@ -321,15 +324,15 @@ $(document).ready(function() {
       }
     }
     if (key == tree.key) { // bang
-      $('.log').append("<div class='log-item'>" + key + " = " + tree.key + "</div>");
-      $('.log').append("<div class='log-item'>Node " + key + " was found</div>");
-      $('.log').append("<div class='log-item'>FINISH</div>");
+      $('.log-content').append("<div class='log-item'>" + key + " = " + tree.key + "</div>");
+      $('.log-content').append("<div class='log-item'>Node " + key + " was found</div>");
+      $('.log-content').append("<div class='log-item'>FINISH</div>");
       drawNode(tree, "#1b72e2");
     }
   }
   ////////////////////////////// Get max //////////////////////////////
   function getMax(tree) {
-    $('.log').append("<div class='log-item'>START to GET MAX</div>");
+    $('.log-content').append("<div class='log-item'>START to GET MAX</div>");
     getMaxProcess(tree);
   }
 
@@ -337,11 +340,11 @@ $(document).ready(function() {
     drawNode(tree, '#dd1b16');
     if (tree.right == null) { // khong tim thay
       drawNode(tree, "#1b72e2");
-      $('.log').append("<div class='log-item'>Result: " + tree.key + "</div>");
-      $('.log').append("<div class='log-item'>FINISH</div>");
+      $('.log-content').append("<div class='log-item'>Result: " + tree.key + "</div>");
+      $('.log-content').append("<div class='log-item'>FINISH</div>");
       return;
     } else { // duyet phai
-      $('.log').append("<div class='log-item'>Node " + tree.key + " --> Go to RIGHT</div>");
+      $('.log-content').append("<div class='log-item'>Node " + tree.key + " --> Go to RIGHT</div>");
       drawLine(tree, tree.right, '#dd1b16');
       drawLineAni(tree, tree.right);
       setTimeout(function() {
@@ -351,7 +354,7 @@ $(document).ready(function() {
   }
   ////////////////////////////// Get min //////////////////////////////
   function getMin(tree) {
-    $('.log').append("<div class='log-item'>START to GET MIN</div>");
+    $('.log-content').append("<div class='log-item'>START to GET MIN</div>");
     getMinProcess(tree);
   }
 
@@ -359,11 +362,11 @@ $(document).ready(function() {
     drawNode(tree, '#dd1b16');
     if (tree.left == null) { // khong tim thay
       drawNode(tree, "#1b72e2");
-      $('.log').append("<div class='log-item'>Result: " + tree.key + "</div>");
-      $('.log').append("<div class='log-item'>FINISH</div>");
+      $('.log-content').append("<div class='log-item'>Result: " + tree.key + "</div>");
+      $('.log-content').append("<div class='log-item'>FINISH</div>");
       return;
     } else { // duyet trai
-      $('.log').append("<div class='log-item'>Node " + tree.key + " --> Go to LEFT</div>");
+      $('.log-content').append("<div class='log-item'>Node " + tree.key + " --> Go to LEFT</div>");
       drawLine(tree, tree.left, '#dd1b16');
       drawLineAni(tree, tree.left);
       setTimeout(function() {
@@ -374,11 +377,11 @@ $(document).ready(function() {
   ////////////////////////////// Get min of RIGHT //////////////////////////////
   function getMinOfRight(tree) {
     drawNode(tree, '#dd1b16');
-    $('.log').append("<div class='log-item'>START to GET MIN of RIGHT</div>");
+    $('.log-content').append("<div class='log-item'>START to GET MIN of RIGHT</div>");
     if (tree.right == null) {
       drawNode(tree, "#1b72e2");
-      $('.log').append("<div class='log-item'>Result: " + tree.key + "</div>");
-      $('.log').append("<div class='log-item'>FINISH</div>");
+      $('.log-content').append("<div class='log-item'>Result: " + tree.key + "</div>");
+      $('.log-content').append("<div class='log-item'>FINISH</div>");
       return;
     } else {
       drawLine(tree, tree.right, '#dd1b16');
@@ -391,11 +394,11 @@ $(document).ready(function() {
   ////////////////////////////// Get max of LEFT //////////////////////////////
   function getMaxOfLeft(tree) {
     drawNode(tree, '#dd1b16');
-    $('.log').append("<div class='log-item'>START to GET MAX of LEFT</div>");
+    $('.log-content').append("<div class='log-item'>START to GET MAX of LEFT</div>");
     if (tree.left == null) {
       drawNode(tree, "#1b72e2");
-      $('.log').append("<div class='log-item'>Result: " + tree.key + "</div>");
-      $('.log').append("<div class='log-item'>FINISH</div>");
+      $('.log-content').append("<div class='log-item'>Result: " + tree.key + "</div>");
+      $('.log-content').append("<div class='log-item'>FINISH</div>");
       return;
     } else {
       drawLine(tree, tree.left, '#dd1b16');
@@ -418,7 +421,7 @@ $(document).ready(function() {
       return;
     }
     showOrderLNR(tree.left);
-    $('.log').append("<div class='log-item'>" + tree.key + "</div>");
+    $('.log-content').append("<div class='log-item'>" + tree.key + "</div>");
     drawNode(tree, '#dd1b16');
     showOrderLNR(tree.right);
   }
@@ -427,7 +430,7 @@ $(document).ready(function() {
     if (tree == null) {
       return;
     }
-    $('.log').append("<div class='log-item'>" + tree.key + "</div>");
+    $('.log-content').append("<div class='log-item'>" + tree.key + "</div>");
     drawNode(tree, '#dd1b16');
     showOrderNLR(tree.left);
     showOrderNLR(tree.right);
@@ -439,7 +442,7 @@ $(document).ready(function() {
     }
     showOrderLRN(tree.left);
     showOrderLRN(tree.right);
-    $('.log').append("<div class='log-item'>" + tree.key + "</div>");
+    $('.log-content').append("<div class='log-item'>" + tree.key + "</div>");
     drawNode(tree, '#dd1b16');
   }
 
@@ -453,5 +456,9 @@ $(document).ready(function() {
     $('.tree-info').append("<div class='tree-info-item'>" + "Total Nodes: " + 3 + "</div>");
     $('.tree-info').append("<div class='tree-info-item'>" + "Height of Tree: " + 3 + "</div>");
     $('.tree-info').append("<div class='tree-info-item'>" + "Nodes on each Level (Level/Nodes): " + "0/1, 1/2, 2/4, 3/3" + "</div>");
+  }
+  function clearTree(tree){
+    drawTree(tree);
+    $('.log-content').empty();
   }
 });
