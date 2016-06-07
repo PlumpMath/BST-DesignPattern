@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BST.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace BST
 
         public object visit(NonEmptyNode nonEmptyNode)
         {
+            if (newKey.Equals(nonEmptyNode.getKey()))
+            {
+                throw new KeyAlreadyExistException(newKey + " already exists");
+            }
             if (newKey < nonEmptyNode.getKey())
                 nonEmptyNode.setLeft((NonEmptyNode)nonEmptyNode.getLeft().accept(this));
             else nonEmptyNode.setRight((NonEmptyNode)nonEmptyNode.getRight().accept(this));

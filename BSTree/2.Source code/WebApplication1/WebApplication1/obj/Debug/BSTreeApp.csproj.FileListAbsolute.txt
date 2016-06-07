@@ -1,3 +1,4 @@
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\BSTreeApp.csprojResolveAssemblyReference.cache
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\ApplicationInsights.config
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\csc.exe
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -15,6 +16,7 @@ D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplicatio
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\WebApplication1.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\WebApplication1.pdb
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\BST.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\EntityFramework.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.Agent.Intercept.dll
@@ -90,7 +92,8 @@ D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplicatio
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.Owin.xml
-D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\BSTreeApp.csprojResolveAssemblyReference.cache
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
-D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\BST.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Cors.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.xml

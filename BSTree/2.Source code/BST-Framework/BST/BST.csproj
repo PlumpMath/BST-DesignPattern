@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{32EC6071-8924-4D8B-A4B2-0BF588B89AF0}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BST</RootNamespace>
     <AssemblyName>BST</AssemblyName>
@@ -49,6 +49,7 @@
     <Compile Include="BSTTraversal.cs" />
     <Compile Include="EmptyNode.cs" />
     <Compile Include="InOrderTraversal.cs" />
+    <Compile Include="KeyAlreadyExistException.cs" />
     <Compile Include="LeafCountingVisitor.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="NodeChecker.cs" />

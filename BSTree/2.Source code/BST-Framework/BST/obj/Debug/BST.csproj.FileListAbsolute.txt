@@ -4,9 +4,9 @@ D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework (2)\BST-Framewo
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework (2)\BST-Framework\BST\bin\Debug\BST.dll.config
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework (2)\BST-Framework\BST\bin\Debug\BST.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework (2)\BST-Framework\BST\obj\Debug\BST.dll
-D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\bin\Debug\BST.dll.config
-D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\bin\Debug\BST.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\bin\Debug\BST.pdb
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\obj\Debug\BST.csprojResolveAssemblyReference.cache
-D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\obj\Debug\BST.dll
 D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\obj\Debug\BST.pdb
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\bin\Debug\BST.exe.config
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\bin\Debug\BST.exe
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-Framework\BST\obj\Debug\BST.exe

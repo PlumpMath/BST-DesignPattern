@@ -1,18 +1,28 @@
 ﻿using BST;
+using BST.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using WebApplication1.DTOs;
 using static WebApplication1.DTOs.TreeInfo;
 
 namespace WebApplication1.Controllers
 {
+   
     [RoutePrefix("api/bstree")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class BSTreeController : ApiController
     {
+        [HttpGet]
+        public string Get()
+        {
+            return "WELCOME TO BST API";
+        }
+
         [HttpPost]
         public RestTemplate BuildTree([FromBody] int[] a)
         {
@@ -21,7 +31,7 @@ namespace WebApplication1.Controllers
                 return new RestTemplate((int)HttpStatusCode.InternalServerError, null, "An array of integers is required to build a tree");
             }
             BSTree tree = new BSTree(a, true);
-            NodeDto dto = toDto(tree.root);
+            NodeDto dto = toDto(tree.root, 1, 0);
             return new RestTemplate((int)HttpStatusCode.OK, dto, "");
         }
 
@@ -71,14 +81,31 @@ namespace WebApplication1.Controllers
             return new RestTemplate((int)HttpStatusCode.OK, length, message);
         }
 
-        private NodeDto toDto(Node node)
+        [Route("insert")]
+        [HttpPost]
+        public RestTemplate InsertX([FromBody] NodeDto root, int x)
+        {
+            BSTree tree = new BSTree(toEntity(root));
+            try
+            {
+                tree.insert(x);
+                return new RestTemplate((int)HttpStatusCode.OK, toDto(tree.root, 1, 0), "");
+            } 
+            catch (KeyAlreadyExistException ex)
+            {
+                return new RestTemplate((int)HttpStatusCode.Conflict, toDto(tree.root, 1, 0), ex.Message);
+            }
+           
+        }
+
+        private NodeDto toDto(Node node, int order, int level)
         {
             if (node.isEmpty()) return null;
 
-            NodeDto dto = new NodeDto(node.getKey());
+            NodeDto dto = new NodeDto(node.getKey(), order, level);
 
-            dto.left = toDto(node.getLeft());
-            dto.right = toDto(node.getRight());
+            dto.left = toDto(node.getLeft(), 2*order - 1, level + 1);
+            dto.right = toDto(node.getRight(), 2*order, level + 1);
 
             return dto;
         }

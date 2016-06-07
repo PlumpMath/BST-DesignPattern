@@ -33,6 +33,7 @@ namespace WebApplication1.DTOs
         [DataMember(Name = "max_of_left_child")]
         public int MaxOfLeftChild { get; set; }
 
+        [DataContract]
         public class NumberOfNodesWrapper
         {
             [DataMember(Name = "having_one_child")]
