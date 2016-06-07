@@ -1,76 +1,34 @@
 $(document).ready(function() {
   // drawLine('#l00t');
-  let tree = {
-    key: 12,
-    level: 0,
-    order: 1,
-    left: {
-      key: 9,
-      level: 1,
-      order: 1,
-      left: {
-        key: 7,
-        order: 1,
-        level: 2,
-        left: null,
-        right: null
-      },
-      right: {
-        key: 11,
-        level: 2,
-        order: 2,
-        left: {
-          key: 10,
-          level: 3,
-          order: 3,
-          left: null,
-          right: null
-        },
-        right: null
-      }
-    },
-    right: {
-      key: 20,
-      level: 1,
-      order: 2,
-      left: {
-        key: 16,
-        level: 2,
-        order: 3,
-        lef: null,
-        right: {
-          key: 18,
-          level: 3,
-          order: 6,
-          left: null,
-          right: null
-        }
-      },
-      right: {
-        key: 23,
-        level: 2,
-        order: 4,
-        left: {
-          key: 21,
-          level: 3,
-          order: 7,
-          left: null,
-          right: null
-        },
-        right: null
-      }
-    }
-  };
+  let tree;
   $('#btn-create').click(function() {
-    drawTree(tree);
-    showTreeInfo(tree);
+    var a = $("#array-key").val().split(',');
+
+    a = $.map(a, function(item) {
+      return parseInt(item, 10);
+    })
+
+    buildTreeFromArray(a).done(function(data) {
+      tree = data.value;
+      drawTree(tree);
+      showTreeInfo(tree)
+    });
   });
   $('#btn-insert').click(function() {
     if (!$('#insert-key').val()) {
       alert("Please enter a key");
       return;
     }
-    insertNode($('#insert-key').val(), tree);
+    insertX(tree, parseInt($('#insert-key').val(), 10)).done(function(response) {
+      if (response.http_status === 200) {
+        insertNode($('#insert-key').val(), tree);
+        tree = response.value;
+      }
+      else if (response.http_status === 409) { 
+        alert(response.message);
+      }
+    })
+    
   });
   $('#btn-find').click(function() {
     if (!$('#find-key').val()) {
@@ -447,15 +405,32 @@ $(document).ready(function() {
   }
 
   function showTreeInfo(tree) {
-    // goi API sau do truyen vao ben duoi
-    $('.tree-info').append("<div class='tree-info-item'>" + "Number of leaves: " + 3 + "</div>");
-    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Child: " + 3 + "</div>");
-    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Left Child: " + 3 + "</div>");
-    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Right Child: " + 3 + "</div>");
-    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have Both Children: " + 3 + "</div>");
-    $('.tree-info').append("<div class='tree-info-item'>" + "Total Nodes: " + 3 + "</div>");
-    $('.tree-info').append("<div class='tree-info-item'>" + "Height of Tree: " + 3 + "</div>");
-    $('.tree-info').append("<div class='tree-info-item'>" + "Nodes on each Level (Level/Nodes): " + "0/1, 1/2, 2/4, 3/3" + "</div>");
+    
+    getTreeInfo(tree).done(function(data) {
+        var treeInfo = data.value;
+
+        $('.tree-info').append("<div class='tree-info-item'>" + "Number of leaves: " + treeInfo.number_of_leaves + "</div>");
+        $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Child: " + treeInfo.number_of_nodes.having_one_child + "</div>");
+        $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Left Child: " + treeInfo.number_of_nodes.having_only_left_child  + "</div>");
+        $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have One Right Child: " + treeInfo.number_of_nodes.having_only_right_child + "</div>");
+        $('.tree-info').append("<div class='tree-info-item'>" + "Nodes have Both Children: " + treeInfo.number_of_nodes.having_both_children + "</div>");
+        $('.tree-info').append("<div class='tree-info-item'>" + "Total Nodes: " + treeInfo.number_of_nodes.all + "</div>");
+        $('.tree-info').append("<div class='tree-info-item'>" + "Height of Tree: " + treeInfo.height + "</div>");
+
+        var levelStr = "";
+        var levels = treeInfo.at_level;
+        for (var i = 0; i < levels.length; i++) {
+          var levels = treeInfo.at_level
+          var s = i + "/" + levels[i];
+          levelStr += s + " ";
+        }
+
+
+        $('.tree-info').append("<div class='tree-info-item'>" + "Nodes on each Level (Level/Nodes): " + levelStr + "</div>");
+    });
+
+
+
   }
   function clearTree(tree){
     drawTree(tree);
