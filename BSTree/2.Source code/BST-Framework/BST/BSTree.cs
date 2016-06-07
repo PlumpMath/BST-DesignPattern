@@ -9,7 +9,10 @@ namespace BST
     {
         public Node root { get; set; }
 
-
+        public BSTree()
+        {
+            root = EmptyNode.getInstance();
+        }
         public BSTree(Node root)
         {
             this.root = root;
@@ -41,6 +44,17 @@ namespace BST
                     insert(a[i]);
                 }
             }
+        }
+
+        public void buildFromArray(int[] a)
+        {
+            Array.Sort(a);
+            root = BSTBuilder.sortedArrayToBST(a, 0, a.Length - 1);
+        }
+
+        public void setNodeFactory(NodeFactory factory)
+        {
+            BSTBuilder.setNodeFactory(factory);
         }
 
         public void traverse(BSTTraversal traversalType)
@@ -111,7 +125,7 @@ namespace BST
 
         public void insert(int newKey)
         {
-            root.accept(new NodeInsertVisitor(newKey));
+            root = (Node)root.accept(new NodeInsertVisitor(newKey));
         }
     }
 }

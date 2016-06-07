@@ -23,6 +23,7 @@ $(document).ready(function() {
       if (response.http_status === 200) {
         insertNode($('#insert-key').val(), tree);
         tree = response.value;
+        showTreeInfo(tree);
       }
       else if (response.http_status === 409) { 
         alert(response.message);
@@ -405,7 +406,7 @@ $(document).ready(function() {
   }
 
   function showTreeInfo(tree) {
-    
+    $('.tree-info').empty();
     getTreeInfo(tree).done(function(data) {
         var treeInfo = data.value;
 

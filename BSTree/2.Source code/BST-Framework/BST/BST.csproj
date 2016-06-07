@@ -49,6 +49,8 @@
     <Compile Include="BSTTraversal.cs" />
     <Compile Include="EmptyNode.cs" />
     <Compile Include="InOrderTraversal.cs" />
+    <Compile Include="InterceptableNode.cs" />
+    <Compile Include="InterceptableNodeFactory.cs" />
     <Compile Include="KeyAlreadyExistException.cs" />
     <Compile Include="LeafCountingVisitor.cs" />
     <Compile Include="Node.cs" />
@@ -57,8 +59,11 @@
     <Compile Include="NodeCountingCondition.cs" />
     <Compile Include="NodeCountingVisitor.cs" />
     <Compile Include="NodeDeletionVisitor.cs" />
+    <Compile Include="NodeFactory.cs" />
+    <Compile Include="NodeFactoryImpl.cs" />
     <Compile Include="NodeHeightFindingVisitor.cs" />
     <Compile Include="NodeInsertVisitor.cs" />
+    <Compile Include="NodeInterceptor.cs" />
     <Compile Include="NodeMaximumSearchingVisitor.cs" />
     <Compile Include="NodeMinimumDeletionVisitor.cs" />
     <Compile Include="NodeMinimumSearchingVisitor.cs" />

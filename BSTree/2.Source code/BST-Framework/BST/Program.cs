@@ -8,15 +8,33 @@ namespace BST
 {
     class Program
     {
+        class NodeInterceptorImpl : NodeInterceptor
+        {
+            public void postHandle(Node node)
+            {
+                Console.WriteLine(node.getKey());
+            }
+
+            public void preHandle(Node node)
+            {
+                Console.WriteLine(node.getKey());
+            }
+        }
         static void Main(string[] args)
         {
-            int[] a = new int[] { 4,2,5 };
+            int[] a = new int[] { 3, 5, 8, 10, 12, 13, 18, 22, 30 };
 
-            BSTree BST = new BSTree(a);
+            BSTree BST = new BSTree();
+           
 
-            BST.insert(3);
+            InterceptableNodeFactory f = InterceptableNodeFactory.getInstance();
+            f.setNodeInterceptor(new NodeInterceptorImpl());
 
-            BST.traverse(new PreOrderTraversal());
+            BST.setNodeFactory(f);
+
+            BST.buildFromArray(a);
+            BST.insert(44);
+            
 
             //Console.Write("Array: ");
             //for (int i = 0; i < 11; i++ )

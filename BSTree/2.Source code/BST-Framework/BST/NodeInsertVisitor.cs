@@ -16,7 +16,7 @@ namespace BST
         }
         public object visit(EmptyNode emptyNode)
         {
-            NonEmptyNode newNode = new NonEmptyNode(newKey);
+            NonEmptyNode newNode = (NonEmptyNode)BSTBuilder.getNodeFactory().createNonEmptyNode(newKey);
             newNode.setLeft(EmptyNode.getInstance());
             newNode.setRight(EmptyNode.getInstance());
             return newNode;
