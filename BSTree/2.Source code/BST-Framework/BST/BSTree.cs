@@ -19,6 +19,7 @@ namespace BST
         }
         public BSTree(int[] a)
         {
+            a = a.Distinct().ToArray();
             root = new NonEmptyNode(a[0]);
             root.setLeft(EmptyNode.getInstance());
             root.setRight(EmptyNode.getInstance());
@@ -29,6 +30,7 @@ namespace BST
         }
         public BSTree(int[] a, bool isBalancedTree)
         {
+            a = a.Distinct().ToArray();
             if (isBalancedTree)
             {
                 Array.Sort(a);

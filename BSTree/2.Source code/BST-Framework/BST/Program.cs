@@ -22,19 +22,19 @@ namespace BST
         }
         static void Main(string[] args)
         {
-            int[] a = new int[] { 3, 5, 8, 10, 12, 13, 18, 22, 30 };
+            int[] a = new int[] { 3, 5, 5,5,8,8, 8, 10, 12, 13, 18, 22, 30 };
 
-            BSTree BST = new BSTree();
-           
+            BSTree BST = new BSTree(a);
+            BST.traverse(new PreOrderTraversal());
 
-            InterceptableNodeFactory f = InterceptableNodeFactory.getInstance();
-            f.setNodeInterceptor(new NodeInterceptorImpl());
+            //BSTree BST = new BSTree();
+            //InterceptableNodeFactory f = InterceptableNodeFactory.getInstance();
+            //f.setNodeInterceptor(new NodeInterceptorImpl());
+            //BST.setNodeFactory(f);
 
-            BST.setNodeFactory(f);
+            //BST.buildFromArray(a);
+            //BST.insert(44);
 
-            BST.buildFromArray(a);
-            BST.insert(44);
-            
 
             //Console.Write("Array: ");
             //for (int i = 0; i < 11; i++ )

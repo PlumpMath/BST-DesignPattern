@@ -39,7 +39,7 @@ namespace WebApplication1.Controllers
         [Route("tree_info")]
         public RestTemplate GetTreeInfo([FromBody] NodeDto root)
         {
-            BSTree tree = new BSTree(toEntity(root));
+            BSTree tree = new BSTree(toEntity(root, NodeFactoryImpl.getInstance()));
 
             TreeInfo treeInfo = new TreeInfo();
             treeInfo.NumberOfLeaves = tree.numberOfLeaves();
@@ -72,7 +72,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public RestTemplate GetPathLengthToX([FromBody] NodeDto root, int x)
         {
-            BSTree tree = new BSTree(toEntity(root));
+            BSTree tree = new BSTree(toEntity(root, NodeFactoryImpl.getInstance()));
             int length = tree.findPathLengthToX(x);
             string message = "";
             if (length == -1)
@@ -81,15 +81,135 @@ namespace WebApplication1.Controllers
             return new RestTemplate((int)HttpStatusCode.OK, length, message);
         }
 
+        [Route("max")]
+        [HttpPost]
+        public RestTemplate GetMax([FromBody] NodeDto root)
+        {
+            BSTree tree = new BSTree();
+            List<int> turnTo = new List<int>();
+            InterceptableNodeFactory.getInstance().setNodeInterceptor(new NodeInterceptorImpl(turnTo));
+            tree.setNodeFactory(InterceptableNodeFactory.getInstance());
+            tree.root = toEntity(root, InterceptableNodeFactory.getInstance());
+
+            int max = tree.maximum();
+            turnTo.RemoveAt(turnTo.Count - 1);
+
+            Dictionary<string, Object> dict = new Dictionary<string, object>();
+            dict.Add("turnTo", turnTo);
+            dict.Add("maximum", max);
+
+            return new RestTemplate((int)HttpStatusCode.OK, dict, "");
+        }
+
+        [Route("maxOfLeft")]
+        [HttpPost]
+        public RestTemplate GetMaxOfLeft([FromBody] NodeDto root)
+        {
+            BSTree tree = new BSTree();
+            List<int> turnTo = new List<int>();
+            InterceptableNodeFactory.getInstance().setNodeInterceptor(new NodeInterceptorImpl(turnTo));
+            tree.setNodeFactory(InterceptableNodeFactory.getInstance());
+            tree.root = toEntity(root, InterceptableNodeFactory.getInstance());
+
+            int max = tree.maximumOfLeftChild();
+            turnTo.RemoveAt(turnTo.Count - 1);
+
+            turnTo.Insert(0, 0);
+
+            Dictionary<string, Object> dict = new Dictionary<string, object>();
+            dict.Add("turnTo", turnTo);
+            dict.Add("maxOfLeft", max);
+
+            return new RestTemplate((int)HttpStatusCode.OK, dict, "");
+        }
+
+        [Route("min")]
+        [HttpPost]
+        public RestTemplate GetMin([FromBody] NodeDto root)
+        {
+            BSTree tree = new BSTree();
+            List<int> turnTo = new List<int>();
+            InterceptableNodeFactory.getInstance().setNodeInterceptor(new NodeInterceptorImpl(turnTo));
+            tree.setNodeFactory(InterceptableNodeFactory.getInstance());
+            tree.root = toEntity(root, InterceptableNodeFactory.getInstance());
+
+            int min = tree.minimum();
+            turnTo.RemoveAt(turnTo.Count - 1);
+
+            Dictionary<string, Object> dict = new Dictionary<string, object>();
+            dict.Add("turnTo", turnTo);
+            dict.Add("min", min);
+
+            return new RestTemplate((int)HttpStatusCode.OK, dict, "");
+        }
+
+        [Route("minOfRight")]
+        [HttpPost]
+        public RestTemplate GetMinOfRight([FromBody] NodeDto root)
+        {
+            BSTree tree = new BSTree();
+            List<int> turnTo = new List<int>();
+         
+            InterceptableNodeFactory.getInstance().setNodeInterceptor(new NodeInterceptorImpl(turnTo));
+            tree.setNodeFactory(InterceptableNodeFactory.getInstance());
+            tree.root = toEntity(root, InterceptableNodeFactory.getInstance());
+
+            int minOfRight = tree.minimumOfRightChild();
+            turnTo.RemoveAt(turnTo.Count - 1);
+
+            turnTo.Insert(0, 1);
+
+            Dictionary<string, Object> dict = new Dictionary<string, object>();
+            dict.Add("turnTo", turnTo);
+            dict.Add("minOfRight", minOfRight);
+
+            return new RestTemplate((int)HttpStatusCode.OK, dict, "");
+        }
+
+        [Route("find")]
+        [HttpPost]
+        public RestTemplate FindX([FromBody] NodeDto root, int x)
+        {
+            BSTree tree = new BSTree();
+            List<int> turnTo = new List<int>();
+            InterceptableNodeFactory.getInstance().setNodeInterceptor(new NodeInterceptorImpl(turnTo));
+            tree.setNodeFactory(InterceptableNodeFactory.getInstance());
+            tree.root = toEntity(root, InterceptableNodeFactory.getInstance());
+
+            tree.findX(x);
+            turnTo.RemoveAt(turnTo.Count - 1);
+
+            Dictionary<string, Object> dict = new Dictionary<string, object>();
+            dict.Add("turnTo", turnTo);
+
+            return new RestTemplate((int)HttpStatusCode.OK, dict, "");
+        }
+
         [Route("insert")]
         [HttpPost]
         public RestTemplate InsertX([FromBody] NodeDto root, int x)
         {
-            BSTree tree = new BSTree(toEntity(root));
+            BSTree tree = new BSTree();
+            List<int> turnTo = new List<int>();
+            InterceptableNodeFactory.getInstance().setNodeInterceptor(new NodeInterceptorImpl(turnTo));
+            tree.setNodeFactory(InterceptableNodeFactory.getInstance());
+            tree.root = toEntity(root, InterceptableNodeFactory.getInstance());
+            
+            //BSTree tree = new BSTree(toEntity(root));
             try
             {
                 tree.insert(x);
-                return new RestTemplate((int)HttpStatusCode.OK, toDto(tree.root, 1, 0), "");
+
+                if (x > turnTo[turnTo.Count - 1])
+                    turnTo[turnTo.Count - 1] = 1;
+                else
+                    turnTo[turnTo.Count - 1] = 0;
+
+                Dictionary<string, Object> dict = new Dictionary<string, object>();
+                dict.Add("turnTo", turnTo);
+                dict.Add("tree", toDto(tree.root, 1, 0));
+
+                return new RestTemplate((int)HttpStatusCode.OK, dict, "");
             } 
             catch (KeyAlreadyExistException ex)
             {
@@ -110,15 +230,44 @@ namespace WebApplication1.Controllers
             return dto;
         }
 
-        private Node toEntity(NodeDto dto)
+        private Node toEntity(NodeDto dto, NodeFactory factory)
         {
-            if (dto == null) return EmptyNode.getInstance();
+            if (dto == null) return factory.createEmptyNode();
 
-            Node node = new NonEmptyNode(dto.key);
-            node.setLeft(toEntity(dto.left));
-            node.setRight(toEntity(dto.right));
+            Node node = factory.createNonEmptyNode(dto.key);
+            node.setLeft(toEntity(dto.left, factory));
+            node.setRight(toEntity(dto.right, factory));
 
             return node;
+        }
+
+        class NodeInterceptorImpl : NodeInterceptor
+        {
+            private List<int> turnTo;
+            public NodeInterceptorImpl(List<int> turnTo)
+            {
+                this.turnTo = turnTo;
+            }
+            public void postHandle(Node node)
+            {
+            }
+
+            public void preHandle(Node node)
+            {
+                if (turnTo.Count != 0)
+                {
+                    if (node.getKey() > turnTo[turnTo.Count - 1])
+                    {
+                        turnTo[turnTo.Count - 1] = 1;
+                    }
+                    else
+                    {
+                        turnTo[turnTo.Count - 1] = 0;
+                    }
+                }
+
+               turnTo.Add(node.getKey());
+            }
         }
     }
 }

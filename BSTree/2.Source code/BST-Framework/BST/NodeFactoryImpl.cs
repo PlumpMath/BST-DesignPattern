@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BST
 {
-    class NodeFactoryImpl : NodeFactory
+    public class NodeFactoryImpl : NodeFactory
     {
         private static NodeFactoryImpl instance = new NodeFactoryImpl();
         private NodeFactoryImpl() { }
