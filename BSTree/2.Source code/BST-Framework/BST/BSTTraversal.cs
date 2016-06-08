@@ -5,8 +5,13 @@ using System.Text;
 
 namespace BST
 {
-    public interface BSTTraversal
+    public abstract class BSTTraversal
     {
-        void traverse(Node node);
+        protected TraversalAction action;
+        public BSTTraversal(TraversalAction action)
+        {
+            this.action = action;
+        }
+        public abstract void traverse(Node node);
     }
 }

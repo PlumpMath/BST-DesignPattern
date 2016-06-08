@@ -7,13 +7,17 @@ namespace BST
 {
     public class PostOrderTraversal : BSTTraversal
     {
-        public void traverse(Node node)
+        public PostOrderTraversal(TraversalAction action) : base(action)
+        {
+        }
+
+        public override void traverse(Node node)
         {
             if (node.isEmpty()) return;
 
             traverse(node.getLeft());
             traverse(node.getRight());
-            Console.Write(node.getKey() + " ");
+            action.run(node);
         }
     }
 }

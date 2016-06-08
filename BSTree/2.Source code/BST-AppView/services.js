@@ -69,3 +69,21 @@ function getMaxOfLeftFromApi(tree) {
 		url:"http://localhost:4664/api/bstree/maxOfLeft"
 	});	
 }
+
+function traverseApi(tree, type) {
+	return $.ajax({
+		type: "POST",
+		data: JSON.stringify(tree),
+		contentType: "application/json",
+		url:"http://localhost:4664/api/bstree/traverse?type=" + type
+	});			
+}
+
+function deleteApi(tree, x) {
+	return $.ajax({
+		type: "POST",
+		data: JSON.stringify(tree),
+		contentType: "application/json",
+		url:"http://localhost:4664/api/bstree/delete?x=" + x
+	});
+}

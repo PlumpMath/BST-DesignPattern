@@ -1,17 +1,33 @@
 $(document).ready(function() {
   // drawLine('#l00t');
-  let tree;
+
+  $('#btn-insert,#btn-find,#btn-get-max,#btn-get-min,#btn-delete,#btn-min-right,#btn-max-left,#btn-show-order').prop('disabled', true);
+
+
+  var tree;
   $('#btn-create').click(function() {
+    if (!$('#array-key').val()) {
+      alert("Please enter a key");
+      return;
+    }
+
     var a = $("#array-key").val().split(',');
 
     a = $.map(a, function(item) {
       return parseInt(item, 10);
     })
 
-    buildTreeFromArray(a).done(function(data) {
-      tree = data.value;
-      drawTree(tree);
-      showTreeInfo(tree)
+    buildTreeFromArray(a).done(function(response) {
+      if (response.http_status === 500) {
+        alert(response.message);
+      }
+      else {
+        tree = response.value;
+        drawTree(tree);
+        showTreeInfo(tree);
+        $('#btn-insert,#btn-find,#btn-get-max,#btn-get-min,#btn-delete,#btn-min-right,#btn-max-left,#btn-show-order').prop('disabled', false);
+      }
+      
     });
   });
   $('#btn-insert').click(function() {
@@ -36,9 +52,15 @@ $(document).ready(function() {
       alert("Please enter a key");
       return;
     }
+
+    if (tree == null) {
+      console.log('tree is null');
+      return;
+    }
+
     findX(tree, parseInt($('#find-key').val(), 10)).done(function(response) {
       if (response.http_status === 200) {
-       
+
         findNode($('#find-key').val(), tree, response.value.turnTo);
       }
     })
@@ -64,12 +86,18 @@ $(document).ready(function() {
       if (response.http_status === 200) {
         getMinOfRight(tree, response.value.turnTo, 0);
       }
+      else if (response.http_status === 409) {
+        $('.log-content').append("<div class='log-item'>" + response.message + "</div>");
+      }
     })
   });
   $('#btn-max-left').click(function() {
     getMaxOfLeftFromApi(tree).done(function(response) {
       if (response.http_status === 200) {
         getMaxOfLeft(tree, response.value.turnTo, 0);
+      }
+      else if (response.http_status === 409) {
+        $('.log-content').append("<div class='log-item'>" + response.message + "</div>");
       }
     })
   });
@@ -78,19 +106,55 @@ $(document).ready(function() {
       alert("Please enter a key");
       return;
     }
-    deleteNode($('#delete-key').val(), tree);
+
+    deleteApi(tree, parseInt($('#delete-key').val())).done(function(response) {
+      if (response.http_status === 200) {
+        tree = response.value;
+        $('#svgPanel').empty();
+        drawTree(tree);
+      }
+      else if (response.http_status === 409) {
+        alert(response.message);
+      }
+    })
+
   });
   $('#btn-show-order').click(function() {
-    // showOrderLNR(tree.left, tree);
+    var nodes;
     if ($('#order-value').val() == "L-N-R") {
-      showOrderLNR(tree);
+      
+      traverseApi(tree, 'inOrder').done(function(response) {
+        if (response.http_status === 200) {
+          nodes = response.value;
+        }
+      })
+      
     }
-    if ($('#order-value').val() == "N-L-R") {
-      showOrderNLR(tree);
+    else if ($('#order-value').val() == "N-L-R") {
+      traverseApi(tree, 'preOrder').done(function(response) {
+        if (response.http_status === 200) {
+          nodes = response.value;
+        }
+      })
     }
-    if ($('#order-value').val() == "L-R-N") {
-      showOrderLRN(tree);
+    else if ($('#order-value').val() == "L-R-N") {
+      traverseApi(tree, 'postOrder').done(function(response) {
+        if (response.http_status === 200) {
+          nodes = response.value;
+        }
+      })
     }
+
+    var counter = 0;
+    var i = setInterval(function() {
+
+      drawSpecificNode(tree, nodes[counter]);
+
+      counter++;
+      if (counter === nodes.length) {
+        clearInterval(i);
+      }
+    }, 1500);
   });
    $('#btn-clear').click(function() {
     clearTree(tree);
@@ -519,21 +583,29 @@ $(document).ready(function() {
   }
   ////////////////////////////// Get max of Lef //////////////////////////////
   function deleteNode(key, tree) {
+
     // goi api delete key de tra ve tree
     // sau do goi ham drawTree(tree) de ve lai cay nhe
+    
   }
   ////////////////////////////// Show ORDER //////////////////////////////
   function showOrder(tree, order) {}
 
-  function showOrderLNR(tree) {
+  function drawSpecificNode(tree, key) {
     if (tree == null) {
-      return;
+      return false;
     }
-    showOrderLNR(tree.left);
-    $('.log-content').append("<div class='log-item'>" + tree.key + "</div>");
-    drawNode(tree, '#dd1b16');
-    showOrderLNR(tree.right);
+
+    if (tree.key === key) {
+      $('.log-content').append("<div class='log-item'>" + tree.key + "</div>");
+      drawNode(tree, '#dd1b16');
+    }
+    else {
+      drawSpecificNode(tree.left, key);
+      drawSpecificNode(tree.right, key)
+      }
   }
+ 
 
   function showOrderNLR(tree) {
     if (tree == null) {
@@ -584,6 +656,7 @@ $(document).ready(function() {
 
   }
   function clearTree(tree){
+    $('#svgPanel').empty();
     drawTree(tree);
     $('.log-content').empty();
   }

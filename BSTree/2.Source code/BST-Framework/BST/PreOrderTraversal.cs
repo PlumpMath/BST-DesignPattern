@@ -7,11 +7,15 @@ namespace BST
 {
     public class PreOrderTraversal : BSTTraversal
     {
-        public void traverse(Node node)
+        public PreOrderTraversal(TraversalAction action) : base(action)
+        {
+        }
+
+        public override void traverse(Node node)
         {
             if (node.isEmpty()) return;
 
-            Console.Write(node.getKey() + " ");
+            action.run(node);
             traverse(node.getLeft());
             traverse(node.getRight());
         }

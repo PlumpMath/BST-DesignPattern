@@ -26,7 +26,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public RestTemplate BuildTree([FromBody] int[] a)
         {
-            if (a == null)
+            if (a == null || a.Length == 0)
             {
                 return new RestTemplate((int)HttpStatusCode.InternalServerError, null, "An array of integers is required to build a tree");
             }
@@ -59,7 +59,7 @@ namespace WebApplication1.Controllers
                 LevelAndNodeCount[i] = tree.numberOfNodesAtLevel(i);
             }
             treeInfo.AtLevel = LevelAndNodeCount;
-
+            treeInfo.Height = tree.findHeight();
             treeInfo.Min = tree.minimum();
             treeInfo.Max = tree.maximum();
             treeInfo.MinOfRightChild = tree.minimumOfRightChild();
@@ -111,8 +111,15 @@ namespace WebApplication1.Controllers
             tree.setNodeFactory(InterceptableNodeFactory.getInstance());
             tree.root = toEntity(root, InterceptableNodeFactory.getInstance());
 
+            
+
             int max = tree.maximumOfLeftChild();
-            turnTo.RemoveAt(turnTo.Count - 1);
+            if (turnTo.Count == 0)
+            {
+                return new RestTemplate((int)HttpStatusCode.Conflict, null, "This tree has no left child");
+            }
+            if (turnTo.Count > 0)
+                turnTo.RemoveAt(turnTo.Count - 1);
 
             turnTo.Insert(0, 0);
 
@@ -155,7 +162,14 @@ namespace WebApplication1.Controllers
             tree.root = toEntity(root, InterceptableNodeFactory.getInstance());
 
             int minOfRight = tree.minimumOfRightChild();
-            turnTo.RemoveAt(turnTo.Count - 1);
+
+            if (turnTo.Count == 0)
+            {
+                return new RestTemplate((int)HttpStatusCode.Conflict, null, "This tree has no right child");
+            }
+
+            if (turnTo.Count > 0)
+                turnTo.RemoveAt(turnTo.Count - 1);
 
             turnTo.Insert(0, 1);
 
@@ -185,6 +199,53 @@ namespace WebApplication1.Controllers
             return new RestTemplate((int)HttpStatusCode.OK, dict, "");
         }
 
+        [Route("traverse")]
+        [HttpPost]
+        public RestTemplate Traverse([FromBody] NodeDto root, string type)
+        {
+            BSTree tree = new BSTree(toEntity(root, NodeFactoryImpl.getInstance()));
+            List<int> turnTo = new List<int>();
+
+            BSTTraversal traversal = null;
+            TraversalAction action = new TraversalActionImpl(turnTo);
+            if (type.Equals("preOrder"))
+            {
+                traversal = new PreOrderTraversal(action);
+            }
+            else if (type.Equals("inOrder"))
+            {
+                traversal = new InOrderTraversal(action);
+            }
+            else if (type.Equals("postOrder"))
+            {
+                traversal = new PostOrderTraversal(action);
+            }
+            else
+            {
+                return new RestTemplate((int)HttpStatusCode.BadRequest, null, "preOrder or inOrder or postOrder is required for type");
+            }
+
+            tree.traverse(traversal);
+
+            return new RestTemplate((int)HttpStatusCode.OK, turnTo, "");
+
+        }
+
+        [Route("delete")]
+        [HttpPost]
+        public RestTemplate DeleteX([FromBody] NodeDto root, int x)
+        {
+            BSTree tree = new BSTree(toEntity(root, NodeFactoryImpl.getInstance()));
+
+            if (tree.findX(x) == null)
+            {
+                return new RestTemplate((int)HttpStatusCode.Conflict, null, x + " is not found");
+            }
+
+            tree.delete(x);
+            return new RestTemplate((int)HttpStatusCode.OK, toDto(tree.root, 1, 0), "");
+        }
+
         [Route("insert")]
         [HttpPost]
         public RestTemplate InsertX([FromBody] NodeDto root, int x)
@@ -200,10 +261,14 @@ namespace WebApplication1.Controllers
             {
                 tree.insert(x);
 
-                if (x > turnTo[turnTo.Count - 1])
-                    turnTo[turnTo.Count - 1] = 1;
-                else
-                    turnTo[turnTo.Count - 1] = 0;
+                if (turnTo.Count > 0)
+                {
+                    if (x > turnTo[turnTo.Count - 1])
+                        turnTo[turnTo.Count - 1] = 1;
+                    else
+                        turnTo[turnTo.Count - 1] = 0;
+                }
+
 
                 Dictionary<string, Object> dict = new Dictionary<string, object>();
                 dict.Add("turnTo", turnTo);
@@ -217,6 +282,8 @@ namespace WebApplication1.Controllers
             }
            
         }
+
+
 
         private NodeDto toDto(Node node, int order, int level)
         {
@@ -267,6 +334,18 @@ namespace WebApplication1.Controllers
                 }
 
                turnTo.Add(node.getKey());
+            }
+        }
+        class TraversalActionImpl : TraversalAction
+        {
+            private List<int> turnTo;
+            public TraversalActionImpl(List<int> turnTo)
+            {
+                this.turnTo = turnTo;
+            }
+            public void run(Node node)
+            {
+                turnTo.Add(node.getKey());
             }
         }
     }

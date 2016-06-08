@@ -20,12 +20,20 @@ namespace BST
                 Console.WriteLine(node.getKey());
             }
         }
+        class TraversalActionImpl : TraversalAction
+        {
+            public void run(Node node)
+            {
+                Console.WriteLine(node.getKey() + " ");
+            }
+        }
         static void Main(string[] args)
         {
-            int[] a = new int[] { 3, 5, 5,5,8,8, 8, 10, 12, 13, 18, 22, 30 };
+            int[] a = new int[] { 3, 5, 8, 10, 12, 13, 18, 22, 30, 21 };
 
-            BSTree BST = new BSTree(a);
-            BST.traverse(new PreOrderTraversal());
+            BSTree BST = new BSTree(a, true);
+            BST.delete(18);
+            BST.traverse(new PreOrderTraversal(new TraversalActionImpl()));
 
             //BSTree BST = new BSTree();
             //InterceptableNodeFactory f = InterceptableNodeFactory.getInstance();
