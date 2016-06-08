@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // drawLine('#l00t');
 
-  $('#btn-insert,#btn-find,#btn-get-max,#btn-get-min,#btn-delete,#btn-min-right,#btn-max-left,#btn-show-order').prop('disabled', true);
+  $('#btn-insert,#btn-find,#btn-get-max,#btn-get-min,#btn-delete,#btn-min-right,#btn-max-left,#btn-show-order,#btn-find-path').prop('disabled', true);
 
 
   var tree;
@@ -25,11 +25,35 @@ $(document).ready(function() {
         tree = response.value;
         drawTree(tree);
         showTreeInfo(tree);
-        $('#btn-insert,#btn-find,#btn-get-max,#btn-get-min,#btn-delete,#btn-min-right,#btn-max-left,#btn-show-order').prop('disabled', false);
+        $('#btn-insert,#btn-find,#btn-get-max,#btn-get-min,#btn-delete,#btn-min-right,#btn-max-left,#btn-show-order,#btn-find-path').prop('disabled', false);
       }
       
     });
   });
+
+  $('#btn-find-path').click(function() {
+    if (!$('#find-path-key').val()) {
+      alert("Please enter a key");
+      return;
+    }
+
+    findX(tree, parseInt($('#find-path-key').val(), 10)).done(function(response) {
+      if (response.http_status === 200) {
+
+        findNode($('#find-path-key').val(), tree, response.value.turnTo);
+        pathLengthToX(tree, parseInt($('#find-path-key').val(), 10)).done(function(response) {
+          if (response.http_status === 200) {
+            $('.log-content').prepend("<div class='log-item'>" + "Path Length To " 
+                                                              + parseInt($('#find-path-key').val(), 10) 
+                                                              + " is " + response.value 
+                                                              + "</div>");
+          }
+        })
+      }
+    })
+
+  })
+
   $('#btn-insert').click(function() {
     if (!$('#insert-key').val()) {
       alert("Please enter a key");
@@ -50,11 +74,6 @@ $(document).ready(function() {
   $('#btn-find').click(function() {
     if (!$('#find-key').val()) {
       alert("Please enter a key");
-      return;
-    }
-
-    if (tree == null) {
-      console.log('tree is null');
       return;
     }
 

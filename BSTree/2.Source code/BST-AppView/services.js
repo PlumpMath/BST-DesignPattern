@@ -87,3 +87,12 @@ function deleteApi(tree, x) {
 		url:"http://localhost:4664/api/bstree/delete?x=" + x
 	});
 }
+
+function pathLengthToX(tree, x) {
+	return $.ajax({
+		type: "POST",
+		data: JSON.stringify(tree),
+		contentType: "application/json",
+		url:"http://localhost:4664/api/bstree/path_length?x=" + x
+	});
+}
