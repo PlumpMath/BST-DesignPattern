@@ -1,0 +1,198 @@
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\ApplicationInsights.config
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\csc.exe
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\vbc.exe
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\BST.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\EntityFramework.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.DependencyCollector.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.Web.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.WindowsServer.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.ApplicationInsights.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Google.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Owin.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Swashbuckle.Core.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Net.Http.Formatting.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Cors.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Helpers.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.Owin.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.WebHost.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Mvc.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Optimization.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Razor.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.WebPages.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\WebActivatorEx.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\WebGrease.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.DependencyCollector.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.Web.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.ApplicationInsights.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Net.Http.Formatting.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Helpers.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.WebHost.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Mvc.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Optimization.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Razor.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.WebPages.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\EntityFramework.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Google.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\bin\System.Web.Http.Owin.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\BSTreeApp.csprojResolveAssemblyReference.cache
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\ApplicationInsights.config
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\csc.exe
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\vbc.exe
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\BST.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\EntityFramework.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.DependencyCollector.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.Web.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.WindowsServer.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.ApplicationInsights.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Google.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Owin.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Swashbuckle.Core.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Net.Http.Formatting.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Cors.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Helpers.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Http.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Http.Owin.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Http.WebHost.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Mvc.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Optimization.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Razor.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.WebPages.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\WebActivatorEx.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\WebGrease.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.DependencyCollector.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.Web.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.ApplicationInsights.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Net.Http.Formatting.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Helpers.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Http.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Http.WebHost.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Mvc.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Optimization.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Razor.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.WebPages.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\EntityFramework.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Google.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\bin\System.Web.Http.Owin.xml
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\obj\Debug\BSTreeApp.csprojResolveAssemblyReference.cache
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\Softs\GitHub\DesignPattern\BSTree\2.Source code\BST-API Service\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
