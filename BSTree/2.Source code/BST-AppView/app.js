@@ -131,6 +131,7 @@ $(document).ready(function() {
         tree = response.value;
         $('#svgPanel').empty();
         drawTree(tree);
+        showTreeInfo(tree);
       }
       else if (response.http_status === 409) {
         alert(response.message);
